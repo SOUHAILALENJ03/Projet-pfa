@@ -3,76 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyDoctor</title>
-    <!-- Police spéciale pour le logo MyDoctor -->
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <title>MyDoctor - Accueil</title>
     <link rel="stylesheet" href="app.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 <body>
-
-    <!-- Navigation -->
-    <header class="navbar fade-in">
+<section class="section1">
+    <header>
         <div class="logo">MyDoctor</div>
-        <nav>
-            <a href="#">Vous êtes soignant ?</a>
-            <a href="#">Centre d’aide</a>
-            <a href="#">Se connecter</a>
+        <nav class="navbar">
+            <a href="#" class="nav-item">Accueil</a>
+            <a href="#" class="nav-item">À propos</a>
+            <a href="#" class="nav-item">Services</a>
+            <a href="#" class="nav-item">Contact</a>
         </nav>
+
+        <a href="#" class="btn-auth">Connexion</a>
     </header>
 
-    <!-- Section Hero -->
     <section class="hero">
-        <div class="hero-text fade-in">
-            <h1>Vivez en meilleure santé</h1>
+        <div class="hero-text">
+            <h1>Trouvez un médecin près de chez vous</h1>
+            <p>Réservez vos consultations rapidement et facilement.</p>
 
-        <div class="search-box pop">
+            <div class="search-box">
+                <div class="select-wrapper">
+                    <i class="fa fa-user-doctor"></i>
+                    <select>
+                        <option value="">Spécialité</option>
+                        <option>Généraliste</option>
+                        <option>Dentiste</option>
+                        <option>Dermatologue</option>
+                    </select>
+                </div>
 
-    <div class="row-search">
+                <div class="input-wrapper">
+                    <i class="fa fa-location-dot"></i>
+                    <input type="text" placeholder="Ville">
+                </div>
 
-        <div class="search-bar">
-
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="Nom, spécialité, établissement…">
-
-            <span class="separator"></span>
-
-            <i class="fa-solid fa-location-dot"></i>
-            <input type="text" class="where" placeholder="Où ?">
-            <button id="search-btn">
-                Rechercher <i class="fa-solid fa-arrow-right"></i>
-            </button>
-
+                <button class="search-btn">
+                    <i class="fa fa-magnifying-glass"></i> Rechercher
+                </button>
+            </div>
         </div>
 
-    </div>
-
-
-
-
-        <div class="hero-image slide-in">
-            <img src="./asset/doctor.png" alt="Docteur et patiente">
-        </div>
+        <img src="./asset/doctor.png" alt="Médecin">
     </section>
-    <!-- SECTION DOCTOR -->
-<section class="doctor-section">
-    <div class="doctor-text fade-in">
-        <h2>Your Health, Our Priority</h2>
-        <p>
-            Welcome to <strong>MyDoctor</strong>, your trusted medical platform.
-            Book appointments, consult specialists, and manage your health easily.
-        </p>
-        <button class="btn">Book Appointment</button>
-    </div>
-
-    <div class="doctor-image slide-in-right">
-        <img src="assets/doctor.png" alt="Doctor">
+</section>
+    
+<!-- À propos -->
+<section class="about" id="about">
+    <div class="about-container">
+        <div class="about-text">
+            <h2>À propos de MyDoctor</h2>
+            <p>MyDoctor vous aide à trouver rapidement le médecin adapté à vos besoins. Que ce soit pour une consultation générale, un suivi spécialisé ou des conseils santé, nous facilitons votre parcours médical.</p>
+            <a href="#" class="btn-learn">En savoir plus</a>
+        </div>
+        <div class="about-image">
+            <img src="./asset/about-doctor.png" alt="À propos de MyDoctor">
+        </div>
     </div>
 </section>
 
+<!-- Services -->
+<section class="services" id="services">
+    <h2>Nos Services</h2>
+    <div class="service-cards">
+        <div class="service-card">
+            <i class="fa fa-stethoscope fa-3x"></i>
+            <h3>Consultations générales</h3>
+            <p>Consultez un médecin généraliste rapidement pour vos besoins de santé courants.</p>
+        </div>
+        <div class="service-card">
+            <i class="fa fa-tooth fa-3x"></i>
+            <h3>Soins dentaires</h3>
+            <p>Trouvez un dentiste qualifié près de chez vous pour vos rendez-vous dentaires.</p>
+        </div>
+        <div class="service-card">
+            <i class="fa fa-skin fa-3x"></i>
+            <h3>Dermatologie</h3>
+            <p>Des dermatologues disponibles pour vos problèmes de peau et consultations spécialisées.</p>
+        </div>
+    </div>
+</section>
 
-    <script src="app.js"></script>
+<!-- Témoignages -->
+<section class="testimonials" id="testimonials">
+    <h2>Témoignages</h2>
+    <div class="testimonial-cards">
+        <div class="testimonial-card">
+            <p>"Grâce à MyDoctor, j'ai trouvé un médecin près de chez moi en quelques minutes seulement !"</p>
+            <h4>- Sarah L.</h4>
+        </div>
+        <div class="testimonial-card">
+            <p>"Réservation facile et rapide. Je recommande vivement cette plateforme."</p>
+            <h4>- Karim B.</h4>
+        </div>
+        <div class="testimonial-card">
+            <p>"Application intuitive, et le médecin que j'ai consulté était très professionnel."</p>
+            <h4>- Nadia T.</h4>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3>MyDoctor</h3>
+            <p>Facilitez vos rendez-vous médicaux avec des professionnels qualifiés, proches de chez vous.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Liens utiles</h4>
+            <ul>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Témoignages</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h4>Contact</h4>
+            <p>Email: contact@mydoctor.com</p>
+            <p>Téléphone: +212 600 000 000</p>
+            <div class="socials">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <p class="footer-copy">© 2025 MyDoctor Maroc. Tous droits réservés.</p>
+</footer>
+
+<script src="app.js"></script>
 </body>
 </html>
