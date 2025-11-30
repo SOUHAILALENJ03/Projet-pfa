@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #0d6efd;
+    color: white;
+    opacity: 0;
+    animation: fadeIn 1.2s forwards;
+}
+
+.navbar nav a {
+    margin-left: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 34px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    background: #0d6efd;
+    color: white;
+}
+
+/* TITLE ANIMATION */
+.hero-text {
+    animation: fadeInUp 1.3s ease-out forwards;
+    opacity: 0;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+/*----------------------------------------------*/
+
+/* SEARCH BOX */
+
+.row-search {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Grande barre blanche */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    padding: 14px 20px;
+    border-radius: 40px;
+    gap: 14px;
+}
+
+/* Icônes */
+.search-bar i {
+    color: #6d6d6d;
+    font-size: 16px;
+}
+
+/* Textes */
+.search-bar input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+/* Champs "Où ?" plus petit */
+.where {
+    width: 80px;
+}
+
+/* Séparateur vertical */
+.separator {
+    width: 1px;
+    height: 26px;
+    background: #cccccc;
+}
+
+/* Bouton Rechercher */
+#search-btn {
+    background: #062c62;
+    color: white;
+    border: none;
+    padding: 14px 18px;
+    border-radius: 40px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+
+/* IMAGE ANIMATION */
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 500px;
+    max-width: 90%;
+    border-radius: 0;
+    transform: none !important;
+    animation: slideIn 1.2s forwards 0.5s;
+}
+
+/* ---------- ANIMATIONS ---------- */
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes popIn {
+    to { opacity: 1; transform: scale(1); }
+}
+/* Section doctor */
+.doctor-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px;
+    background: #f6f9ff;
+}
+
+/* Text zone */
+.doctor-text {
+    max-width: 500px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.doctor-text h2 {
+    font-size: 42px;
+    color: #2563eb;
+    margin-bottom: 20px;
+}
+
+.doctor-text p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.btn {
+    margin-top: 20px;
+    background: #2563eb;
+    border: none;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1e40af;
+    transform: scale(1.05);
+}
+
+/* Image */
+.doctor-image img {
+    width: 400px;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Float animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Entrance animations */
+.fade-in {
+    animation: fade 1.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fade {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.slide-in-right {
+    animation: slideRight 1.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes slideRight {
+    0% { opacity: 0; transform: translateX(80px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
