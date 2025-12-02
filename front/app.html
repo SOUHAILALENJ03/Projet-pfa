@@ -11,16 +11,19 @@
 </head>
 <body>
 <section class="section1">
-    <header>
+    <header class="site-header"> <!-- changé pour site-header et header-actions -->
         <div class="logo">MyDoctor</div>
+
         <nav class="navbar">
             <a href="#" class="nav-item">Accueil</a>
-            <a href="#" class="nav-item">À propos</a>
-            <a href="#" class="nav-item">Services</a>
-            <a href="#" class="nav-item">Contact</a>
+            <a href="#about" class="nav-item">À propos</a> <!-- ajout des ancres -->
+            <a href="#services" class="nav-item">Services</a>
+            <a href="#testimonials" class="nav-item">Témoignages</a>
         </nav>
 
-        <a href="#" class="btn-auth">Connexion</a>
+        <div class="header-actions"> <!-- remplacé <a> par bouton + div -->
+            <button class="btn-auth" id="openAuth">Connexion</button>
+        </div>
     </header>
 
     <section class="hero">
@@ -30,8 +33,8 @@
 
             <div class="search-box">
                 <div class="select-wrapper">
-                    <i class="fa fa-user-doctor"></i>
-                    <select>
+                    <i class="fa-solid fa-user-doctor"></i> <!-- mis à jour fa-solid -->
+                    <select id="filter-specialty"> <!-- ajout id pour JS -->
                         <option value="">Spécialité</option>
                         <option>Généraliste</option>
                         <option>Dentiste</option>
@@ -40,19 +43,56 @@
                 </div>
 
                 <div class="input-wrapper">
-                    <i class="fa fa-location-dot"></i>
-                    <input type="text" placeholder="Ville">
+                    <i class="fa-solid fa-location-dot"></i> <!-- mis à jour fa-solid -->
+                    <input id="filter-city" type="text" placeholder="Ville"> <!-- ajout id pour JS -->
                 </div>
 
-                <button class="search-btn">
-                    <i class="fa fa-magnifying-glass"></i> Rechercher
+                <div class="input-wrapper"> <!-- ajouté input nom médecin -->
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input id="filter-name" type="text" placeholder="Nom du médecin (optionnel)">
+                </div>
+
+                <button class="search-btn" id="searchBtn"> <!-- ajout id pour JS -->
+                    <i class="fa-solid fa-magnifying-glass"></i> Rechercher
                 </button>
             </div>
         </div>
 
-        <img src="./asset/doctor.png" alt="Médecin">
+        <div class="hero-image"> <!-- encapsulé l'image dans div hero-image -->
+            <img src="./asset/doctor.png" alt="Médecin">
+        </div>
     </section>
 </section>
+
+<!-- Modal Connexion / Inscription -->
+<div id="authModal" class="modal">
+    <div class="modal-content animate-modal">
+        <span class="close">&times;</span>
+
+        <!-- Onglets -->
+        <div class="auth-tabs">
+            <button class="tab-btn active" data-tab="login">Se connecter</button>
+            <button class="tab-btn" data-tab="signup">S'inscrire</button>
+        </div>
+
+        <!-- Formulaire Connexion -->
+        <form id="loginForm" class="auth-form active">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Mot de passe" required>
+            <button type="submit">Se connecter</button>
+        </form>
+
+        <!-- Formulaire Inscription -->
+        <form id="signupForm" class="auth-form">
+            <input type="text" placeholder="Nom complet" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Téléphone" required>
+            <input type="password" placeholder="Mot de passe" required>
+            <button type="submit">S'inscrire</button>
+        </form>
+    </div>
+</div>
+
     
 <!-- À propos -->
 <section class="about" id="about">
@@ -63,7 +103,7 @@
             <a href="#" class="btn-learn">En savoir plus</a>
         </div>
         <div class="about-image">
-            <img src="./asset/about-doctor.png" alt="À propos de MyDoctor">
+            <img src="./asset/about-Doctor (4).png" alt="À propos de MyDoctor">
         </div>
     </div>
 </section>
@@ -83,10 +123,11 @@
             <p>Trouvez un dentiste qualifié près de chez vous pour vos rendez-vous dentaires.</p>
         </div>
         <div class="service-card">
-            <i class="fa fa-skin fa-3x"></i>
+            <i class="fa fa-user fa-3x"></i> <!-- icône dermatologie -->
             <h3>Dermatologie</h3>
             <p>Des dermatologues disponibles pour vos problèmes de peau et consultations spécialisées.</p>
         </div>
+
     </div>
 </section>
 
