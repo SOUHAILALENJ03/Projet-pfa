@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyDoctor - Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header class="dashboard-header">
+    <div class="logo">MyDoctor</div>
+    <button class="btn-logout" id="logoutBtn">Déconnexion</button>
+</header>
+
+<div class="dashboard-container">
+    <!-- Menu latéral -->
+    <div class="dashboard-menu">
+        <button onclick="showSection('profile')"><i class="fa fa-user"></i> Mon Profil</button>
+        <button onclick="showSection('appointment')"><i class="fa fa-calendar"></i> Rendez-vous</button>
+        <button onclick="showSection('reviews')"><i class="fa fa-star"></i> Avis</button>
+    </div>
+
+    <!-- Contenu -->
+    <div class="dashboard-content">
+        <!-- PROFIL -->
+        <section id="profile" class="form-section">
+            <h2>Mon Profil</h2>
+            <form id="profileForm">
+                <input type="text" id="profileName" placeholder="Nom complet" required>
+                <input type="email" id="profileEmail" placeholder="Email" required>
+                <input type="tel" id="profilePhone" placeholder="Téléphone">
+                <input type="text" id="profileAddress" placeholder="Adresse">
+                <input type="number" id="profileAge" placeholder="Âge">
+                <input type="text" id="profileAllergies" placeholder="Allergies">
+                <input type="text" id="profileInsurance" placeholder="Mutuelle / Assurance">
+                <button type="submit">Mettre à jour</button>
+            </form>
+        </section>
+
+        <!-- RENDEZ-VOUS -->
+        <section id="appointment" class="form-section">
+            <h2>Prendre rendez-vous</h2>
+            <form id="appointmentForm">
+                <label>Médecin</label>
+                <select id="appointmentDoctor">
+                    <option>Dr. Dupont</option>
+                    <option>Dr. Martin</option>
+                </select>
+                <label>Date</label>
+                <input type="date" id="appointmentDate">
+                <label>Heure</label>
+                <input type="time" id="appointmentTime">
+                <label>Type de consultation</label>
+                <select id="appointmentType">
+                    <option value="presentielle">Présentielle</option>
+                    <option value="visio">En ligne (visio)</option>
+                </select>
+                <button type="submit">Réserver</button>
+            </form>
+        </section>
+
+        <!-- AVIS -->
+        <section id="reviews" class="form-section">
+            <h2>Laisser un avis</h2>
+            <form id="reviewForm">
+                <label>Médecin</label>
+                <select id="reviewDoctor">
+                    <option>Dr. Dupont</option>
+                    <option>Dr. Martin</option>
+                </select>
+                <label>Note</label>
+                <select id="reviewRating">
+                    <option value="1">1 étoile</option>
+                    <option value="2">2 étoiles</option>
+                    <option value="3">3 étoiles</option>
+                    <option value="4">4 étoiles</option>
+                    <option value="5">5 étoiles</option>
+                </select>
+                <label>Commentaire</label>
+                <textarea id="reviewComment" placeholder="Votre avis..."></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </div>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
